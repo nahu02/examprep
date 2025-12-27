@@ -1,0 +1,43 @@
+You are creating a study scaffold (NOT complete notes) for exam preparation.
+
+Subject: {subject}
+Subtopic: {title} - {description}
+Exam format: {exam_format}
+Student must be able to: {must_be_able_to}
+
+Source material (read carefully):
+{concatenated_pages}
+
+Generate a Markdown scaffold with:
+
+## Overview
+[2-3 sentence summary of what this subtopic covers]
+
+## Key Concepts to Master
+[Bullet list of main ideas with BLANKS to fill, e.g., "**______** is the process by which..."]
+
+## Definitions (Fill These In)
+- **Term 1**: ____________
+- **Term 2**: ____________
+
+## Important Distinctions
+[Comparison table or bullets highlighting confusions, e.g., "X vs Y"]
+
+## Example to Reproduce
+[Prompt for student to work through an example, with hints about where to find it]
+
+## Likely Exam Questions
+[3-5 questions based on exam format, each citing source page]
+
+## Sources to Read
+[Table: PDF | Pages | Why Read]
+Make sure to include links to specific PDFs using the format:
+[PDF_name](pdf/path) | p.X-Y | Reason to read
+The pdf path should be `../../subjects/{subject}/sources/<PDF_name>`.
+
+
+Rules:
+- Use blanks (____) not complete answers
+- Cite page numbers in square brackets [PDF_name p.X]
+- Keep scaffolding—student must fill gaps from sources
+- Format for easy scanning (headers, bullets, tables)

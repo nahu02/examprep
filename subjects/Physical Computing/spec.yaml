@@ -1,0 +1,34 @@
+subject: "Physical Computing"
+exam_format: "Individual oral exam (20 minutes) where 2 random topics are selected for short presentations (2-3 mins each), followed by questions based on the group project and curriculum."
+must_be_able_to:
+  - "Use basic electronic components and sensors/actuators to design and construct interactive artifacts."
+  - "Construct advanced interactive devices based on standalone microcontrollers."
+  - "Utilize 3D printers to print CAD models and integrate electronic circuits with 3D prints."
+  - "Prototype a working Physical Computing system according to a project brief."
+  - "Evaluate and reflect on work from a technological, user experience, and multimodal interaction perspective."
+  - "Support prototype design choices with scientifically grounded arguments referencing HCI, Psychology, and Physical Computing."
+
+subtopics:
+  - id: basic_components_circuits
+    title: "Basic components and circuits"
+    description: "Resistors, diodes, capacitors, crystals, transistors (BJTs, MOSFETs), Ohm’s Law, and circuit diagrams (symbols, series vs. parallel)"
+
+  - id: sensors
+    title: "Sensors"
+    description: "Sensor types and alternatives, data conversion, and signal filtering; focus on own assignment project sensors (sensors used, alternatives considered)"
+
+  - id: actuators
+    title: "Actuators"
+    description: "Types of actuators, powering considerations, and control methods (H-Bridge, PWM); focus on own assignment project actuators (actuators used, alternatives considered)"
+
+  - id: mcus_wireless_power
+    title: "MCUs, wireless comms, and power"
+    description: "What are microcontrollers, advantages/ disadvantages, microcontroller architecture (pins, ADC, memory), protocols (I2C, SPI, UART), ADC, PCB design (materials, board layout, SMT, through-hole, Fusion360 Eagle and DRC), wireless (Bluetooth, RFID, NFC), and power management (batteries [battery power, series vs parallel], DC-DC converters, using multiple power sources), calculating voltage/current/power requirements"
+
+  - id: 3d_models_prints
+    title: "3D models and prints"
+    description: "Design guidelines for printability, additive vs. subtractive manufacturing, slicer settings, and fabrication method selection, alternatives to FFF (FDM)"
+
+  - id: interaction_design_multimodal
+    title: "Interaction design and multimodal interaction"
+    description: "Norman’s Design Principles, affordances, input device properties, transfer/acceleration functions, feedback mechanisms, and multimodal definitions, applications and examples"

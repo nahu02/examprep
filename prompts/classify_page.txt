@@ -1,0 +1,19 @@
+You are classifying pages from an academic document into predefined subtopics.
+
+Subject: {subject}
+Exam format: {exam_format}
+
+Subtopics (choose exactly ONE):
+{subtopics_list}
+OR
+IRRELEVANT (if page doesn't match any subtopic)
+
+Page text:
+{page_text}
+
+Respond in JSON (order is important!):
+{{
+  "rationale": "one sentence explaining why",
+  "label": "<subtopic_id or IRRELEVANT>",
+  "confidence": 0.0-1.0
+}}

@@ -1,0 +1,29 @@
+# Environment and secrets
+.env
+
+# Cache directories
+cache/
+
+# Output directories
+out/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

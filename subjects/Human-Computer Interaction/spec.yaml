@@ -1,0 +1,82 @@
+subject: "Human-Computer Interaction"
+exam_format: "two-hour written test consisting of 30 multiple-choice questions (1 point each) and 5 essay questions (up to 6 points each)"
+must_be_able_to:
+  - "Outline what the field of Human–Computer Interaction (HCI) is concerned with."
+  - "Describe characteristics of human cognition and perception, and relate them to design principles for interactive systems."
+  - "Analyse user interfaces and motivate user interface designs using HCI models and theories."
+  - "Apply HCI principles and guidelines in design and implementation of user interfaces."
+  - "Describe, select and apply appropriate methods for evaluation of usability and user experience."
+
+
+subtopics:
+  - id: introduction_to_hci
+    title: "Introduction to HCI"
+    description: "Scope, importance, and essential activities of Human-Computer Interaction"
+
+  - id: web_fundamentals
+    title: "Web Fundamentals (HTML & CSS)"
+    description: "HTML tags/attributes, CSS selectors, box model, and cascading rules"
+
+  - id: interaction_paradigms
+    title: "Interaction Paradigms & Techniques"
+    description: "Command-line vs. Direct Manipulation, interaction tasks, and translational distance"
+
+  - id: javascript_basics
+    title: "JavaScript Fundamentals"
+    description: "Data representation, control flow, functions, objects, and class syntax"
+
+  - id: human_centered_ai
+    title: "Human-Centered AI (HCAI)"
+    description: "AI interfaces vs. traditional UIs, mental models, collaboration patterns, and prompt design"
+
+  - id: dom_and_events
+    title: "DOM & Event Handling"
+    description: "DOM manipulation, traversal, event flow (bubbling/capturing), and delegation"
+
+  - id: design_principles_theories
+    title: "GUI Design Principles & Theories"
+    description: "Shneiderman’s rules, Norman’s principles, error types, and HCI theories"
+
+  - id: visual_design_mental_models
+    title: "Visual Design & Mental Models"
+    description: "Metaphors, grid layout, and NN/g visual design principles"
+
+  - id: input_output_devices
+    title: "Input & Output Devices"
+    description: "Degrees of freedom, control-display gain, transfer functions, and display types"
+
+  - id: cognitive_psychology
+    title: "Human Perception & Cognition"
+    description: "Human sensor system, Fitts' law, Hick-Hyman law, memory, and Model Human Processor"
+
+  - id: desktop_apps
+    title: "Desktop Applications"
+    description: "Building desktop apps with JavaScript, Electron, and Node.js"
+
+  - id: evaluation_analytical
+    title: "Analytical Evaluation Methods"
+    description: "Heuristic evaluation, cognitive walkthrough, and think-aloud studies"
+
+  - id: responsive_design
+    title: "Responsive Web Design"
+    description: "Media queries, fluid grids, and adapting UIs to different devices"
+
+  - id: evaluation_empirical
+    title: "Empirical Evaluation (Experiments)"
+    description: "What is an experiment vs a study; hypothesis testing, variables (independent/dependent), validity, and field studies"
+
+  - id: css_frameworks
+    title: "CSS Frameworks"
+    description: "Purpose, pros/cons, and usage of CSS frameworks"
+
+  - id: activity_theory
+    title: "Activity Theory"
+    description: "Hierarchical structure, Vygotsky's mediation and Engeström's expansion, internalisation/externalisation, contradictions, contradiction subtypes"
+
+  - id: js_frameworks
+    title: "JavaScript Frameworks (Vue.js)"
+    description: "Reactivity, templates, and the View-Model relationship"
+
+  - id: accessibility_universal_design
+    title: "Universal Usability & Accessibility"
+    description: "Disability categories, WAI-ARIA, accessible HTML, and internationalization"
