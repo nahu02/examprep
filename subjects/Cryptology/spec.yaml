@@ -1,5 +1,5 @@
 subject: "Cryptology"
-exam_format: "Oral exam with no preparation (max 30 minutes). Students randomly select 1 of 6 subjects and present for up to 18 minutes, followed by questions."
+exam_format: "Oral exam with no preparation (max 30 minutes). Students randomly select 1 of 6 subjects and present for up to 18 minutes, followed by questions. Students may bring notes."
 must_be_able_to:
   - "Provide comprehensive overviews of cryptographic concepts and systems."
   - "Present and prove relevant theorems and security results from course material."
