@@ -1,0 +1,33 @@
+subject: "Cryptology"
+exam_format: "Oral exam with no preparation (max 30 minutes). Students randomly select 1 of 6 subjects and present for up to 18 minutes, followed by questions."
+must_be_able_to:
+  - "Provide comprehensive overviews of cryptographic concepts and systems."
+  - "Present and prove relevant theorems and security results from course material."
+  - "Explain cryptographic definitions, constructions, and their security properties."
+  - "Demonstrate understanding of both theoretical foundations and practical cryptographic schemes."
+  - "Apply concepts from exercises to explain cryptographic principles."
+
+subtopics:
+  - id: information_theory
+    title: "Information Theory and Cryptography"
+    description: "Definition of perfect secret security, why you need as many keys at plaintexts to have perfect security. Definition of entropy, and proof of some of the inequalities properties it satisfies. Unicity distance."
+
+  - id: symmetric_crypto
+    title: "Symmetric (secret-key) Crypto"
+    description: "What a crypto-system is (the three algorithms). DES, AES, high-level description of what a block cipher is. Definitions of PRF and CPA security. Specification of CBC or CTR modes, proofs of CPA security for CBC or CTR mode. Perhaps a brief talk about stream ciphers and how to make one from a block cipher."
+
+  - id: factoring_based_crypto
+    title: "Public-key Crypto based on Factoring"
+    description: "What a public-key cryptosystem is. Basic spec of RSA, idea of proof that decryption works. How to make RSA be CPA secure (the PCRSA scheme, and the result that computing the least significant bit is as hard as inverting RSA). How to generate keys and Miller-Rabin primality testing, how to get CCA security: OAEP and the intuition on why it works."
+
+  - id: discrete_log_lwe_crypto
+    title: "Public-key Crypto based on Discrete Log and LWE"
+    description: "The DL, DH and DDH problems, and how they relate. The El Gamal cryptosystem and proof that it is secure if DDH is hard. Example of groups we can use: subgroup of Z_p*, elliptic curves. LWE problem and the cryptosystem, proof from the exercise that decryption works under a certain assumption about the noise distribution."
+
+  - id: authentication_hash
+    title: "Symmetric Authentication and Hash Functions"
+    description: "Definition of collision-intractable hash functions. Construction from discrete log, proof that collision-intractable implies one-way, construction and proof that we can get any size input from fixed size input. MAC schemes, definition of CMA security, CBCMAC and EMAC security result for EMAC. Brief mention of HMAC."
+
+  - id: digital_signatures
+    title: "Digital Signature Schemes"
+    description: "Signature scheme definitions, CMA security, Schnorr signatures with interactive game proofs (1/q cheating probability) and how to derive the signature scheme from the interactive game, RSA+hash signatures with security proof (that secure hash + secure signature scheme is secure). One-time signatures from hash functions and the proof that they are secure."
