@@ -60,4 +60,5 @@ Map the study points back to the PDF files for verification.
 **General Constraints:**
 - **No Hallucinations:** If the source text is incomplete, explicitly state "Source data missing for X" in the scaffold.
 - **Tone:** Direct and challenging. Use imperative verbs ("Define," "Calculate," "Contrast").
-- **Formatting:** Use Markdown headers, bolding, and code blocks for readability. You may use LaTeX for equations if needed in the format $...\LaTeX()...$ directly within Markdown.
+- **Text formatting:** Use Markdown headers, bolding, and code blocks for readability.
+- **Math formatting:** You MUST ALWAYS use LaTeX formatting, when including any equations or math symbols, with the format $...\LaTeX()...$ directly within Markdown. Remember to use dollar signs for inline math and double dollar signs for block math.
