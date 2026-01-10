@@ -10,14 +10,23 @@ Definition of perfect secret security, why you need as many keys as plaintexts t
 ## Core Vocabulary & Syntax (Total Recall)
 
 ### Shift Cypher
-> TODO
+> The Shift Cipher (Caesar substitution) works on an alphabet containing $n$ symbols that we number from $0$ to $n−1$, corresponding to the elements in $\Z_n$.
+> For instance, in the English alphabet, $a$ would correspond to $0$, $b$ to $1$...
+
+> We set $K = P = C = \Z_n$ and the system works as follows:<br/>
+> Key Generation:   Output $k$ chosen uniformly at random from $\mathcal{K}$.<br/>
+> Encryption Set:   $E_k(x) = (x + k) \mod n$<br/>
+> Decryption Set:   $D_k(y) = (y − k) \mod n$
+
+> This cipher was used by encrypting each letter in a message using the same key.
+> This clearly leads to a very insecure solution, but it's not necessarily the case if we vary the key more often.
 
 ### Perfect security
 > A cryptosystem has perfect security if for all $x \in P$ and $y \in C$, it holds that $P[x|y] = P[x]$
 > The definition simply says that seeing the ciphertext does not help the adversary at all: the distribution on the plaintext remains the same whether you are given the ciphertext or not.
 
 > Using Bayes' theorem ($P[A|B] = \frac{P[A,B]}{P[B]} = \frac{P[B|A]P[A]}{P[B]}$), we can see that the definition implies that **A cryptosystem has perfect security if and only if $P[y|x] = P[y]$**
-> This is often easier to test (~ if we do not know the key, we cannot predict what the cyphertext will be)
+> This is often easier to test (~ if we do not know the key, we cannot predict what the ciphertext will be)
 
 ### Entropy
 > Shannon’s notion of Entropy gives us a way to assign a number to a random variable with a given probability distribution.
@@ -42,7 +51,7 @@ you have learned $log_2(\frac{1}{p}) \text{ bits}$ of information.
 > Information gained: Observing the ciphertext provides $H(C)$ bits of information.<br/>
 > Remaining uncertainty: The equation shows **how much uncertainty about the key remains after seeing the ciphertext**.<br/>
 > **For perfect secrecy, you need $H(K∣C) = H(K)$**, meaning the ciphertext reveals nothing about the key, which requires $H(K) \geq H(P)$,
-> meaning for perfect security your keyspace must be at least as big as your plaintext space (to have enough enthropy).
+> meaning for perfect security your keyspace must be at least as big as your plaintext space (to have enough entropy).
 
 > What's important that entropy (by design) behaves as intuitively expected from a quantity describing uncertainty of a random variable.
 
@@ -77,18 +86,10 @@ Derive the equivalence from Definition 5.1 using Bayes' formula:
 ### Theorem 5.4: Key Size Requirement for Perfect Security
 Prove $|K| \geq |C| \geq |P|$:
 
-1. For correct decryption, $|C| \geq |P|$, since [____________________].
-2. [____________________] (For fixed $x$, argue every$y$must be reachable).
-3. [____________________] (Thus $|K| \geq |C|$).
-4. Therefore, $|K| \geq |C| \geq |P|$.
+1. For correct decryption, $|C| \geq |P|$, since [two plaintexts cannot be sent to the same ciphertext].
+2. [Given $x \in P$, using different keys every $y \in C$ must be a legit encryption, otherwise the attacker could learn some info from $y$ alone. That means there must exist at least one key for each $x \rArr y$ mapping].
+3. Therefore, $|K| \geq |C| \geq |P|$.
 
-### Theorem 5.5: Characterization of Minimal Perfect Security
-Prove the if-and-only-if for$|K| = |C| = |P|$:
-
-1. Assume perfect security; for fixed$x$, every$y$requires [____________________].
-2. [____________________] (Since$|K| = |C|$, exactly one key per pair).
-3. [____________________] (Fix$y$; use$P[y] = P[y|x] = P[K_x]$for uniformity).
-4. Reverse direction mirrors Shift cipher proof.
 
 ## Exam Simulation
 
