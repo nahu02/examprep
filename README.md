@@ -51,7 +51,7 @@ examprep/
 │       ├── <subject>.jsonl
 │       └── <pdf_hash>.jsonl
 │
-└── out/                  # Generated study scaffolds (gitignored)
+└── out/                  # Generated (and sometimes @nahu02 filled) study scaffolds
     └── <subject_name>/
         ├── index.md      # Overview with links
         └── <subtopic_id>.md
