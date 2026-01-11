@@ -6,6 +6,8 @@
         "ciphertext",
         "ciphertexts",
         "cryptosystem",
+        "cryptosystems",
+        "Feistel",
         "keyspace",
         "plaintexts",
         "unicity"
