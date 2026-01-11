@@ -10,6 +10,7 @@
         "Feistel",
         "keyspace",
         "plaintexts",
+        "totient",
         "unicity"
     ],
 }
