@@ -21,7 +21,7 @@ You must be able to:
 - [x] [Information Theory and Cryptography](./information_theory.md) (28 pages)
 - [x] [Symmetric (secret-key) Crypto](./symmetric_crypto.md) (38 pages)
 - [x] [Public-key Crypto based on Factoring](./factoring_based_crypto.md) (27 pages)
-- [ ] [Public-key Crypto based on Discrete Log and LWE](./discrete_log_lwe_crypto.md) (21 pages)
+- [x] [Public-key Crypto based on Discrete Log and LWE](./discrete_log_lwe_crypto.md) (21 pages)
 - [ ] [Symmetric Authentication and Hash Functions](./authentication_hash.md) (16 pages)
 - [ ] [Digital Signature Schemes](./digital_signatures.md) (14 pages)
 
