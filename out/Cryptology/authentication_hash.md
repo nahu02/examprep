@@ -1,6 +1,9 @@
 # Symmetric Authentication and Hash Functions
 
-Definition of collision-intractable hash functions. Then a selection of: construction from discrete log, proof that collision-intractable implies one-way, construction and proof that we can get any size input from fixed size input. Finally, MAC schemes, definition of CMA security, CBCMAC and EMAC security result for EMAC. Maybe a brief mention of HMAC.
+Definition of collision-intractable hash functions.
+Then a selection of: construction from discrete log, proof that collision-intractable implies one-way, construction and proof that we can get any size input from fixed size input.
+Finally, MAC schemes, definition of CMA security, CBCMAC and EMAC security result for EMAC.
+Maybe a brief mention of HMAC.
 
 ## The "Elevator Pitch" (Synthesis)
 
@@ -12,34 +15,157 @@ Definition of collision-intractable hash functions. Then a selection of: constru
 
 ## Core Vocabulary & Syntax (Total Recall)
 
-Define each term precisely using the source material. Include the mathematical notation or context where applicable.
+> Define each term precisely using the source material. Include the mathematical notation or context where applicable.
 
-### Collision-intractable hash function
-[Your definition]
+### Hash functions, collision-intractability and proof that this implies one-way
+> A hash function is defined by a *generator* $\mathcal{H}$, which on input a security parameter $k$ outputs the description of 
+> a function that maps any bit string to a string of length $k$.
+> $$h : \{0,1\}^* \to \{0,1\}^k$$
+> By "description" we mean information allowing us to compute the function efficiently (formally speaking, in polynomial time in $k$ and length of the input string).
+> Note that there is no secret key involved here - the function we are using is public.
 
-### Second preimage attack
-[Your definition]
+> One use case is where a data string $m$ is to be stored in an insecure location.
+> We then compute the authenticator $h(m)$ and store it in a secure location.
+> Later, we retrieve a (possibly different) string $m'$, we then compute $h(m')$ and compare to $h(m)$.
+> This is why we want a fixed length output: it's easier to store a short fixed size value securely.
+> The value $h(m)$ is also called a *message digest* or a *message fingerprint*.
 
-### Collision attack
-[Your definition]
+> What properties do we need for such a function in order for the system to be secure?
+> 
+> A *second preimage attack*:<br/>
+> Given the function $h$ and the message $m$, an adversary must find a different message $m'$ such that $h(m) = h(m')$.
+>
+> A *collision attack*:
+> The adversary must find *any single* pair of messages $m \neq m'$, such that $h(m) = h(m')$ – a **collision**.
+> (If they can trick the honest user into storing $m$, they can later change this to $m'$ without being detected).
+>
+> Second preimage attack $\geq$ collision attack, using the same amount of time and with the same success probability: just choose $m$ yourself and then run whatever algorithm you have for a second preimage attack.
+> Therefore, the best security is obtained, if even a collision attack is infeasible.
 
-### Message digest / fingerprint
-[Your definition]
+> **Collision intractability**:<br/>
+> Consider the game where we run $\mathcal{H}$ on input $k$ to get function $h$.
+> We give $h$ as input to adversary algorithm $A$, who outputs 2 strings $m, m'$.<br/>
+> We say that $A$ has success if $m \neq m'$ and $h(m) = h(m')$.<br/>
+> We say that $\mathcal{H}$ is collision intractable, if any PPT (probabilistic, polynomial-time) algorithm $A$ has success with negligible probability (as a function of $k$).
 
-### Domain extension
-[Your definition]
+> If we can invert a hash function, we can also find a collision:
+> 1. The inversion algorithm can choose a random $m$ and give $h(m)$ as input to $A$,
+> 2. $A$ returns $m'$.
+> If $A$ has succeeds (so $h(m') = h(m)$), and if $m' \neq m$, then we have a collision.
+> If not, we can keep repeating this until we do.
+> 
+> A collision for $h$ can be found in time $t$ plus one evaluation of $h$ and with probability at least $\epsilon/2 - 2^{-k-1}$ if $m$ is $2k$ bits long. (This comes from the fact that $P[m \text{ has no siblings that would map to the same input}] \leq 2−k$)
+>
+> Therefore, because being able to invert a function $\implies$ finding a collision,
+> if we cannot find don't have a way to find a collision $\implies$ we certainly cannot invert the hash function.
 
-### Merkle-Damgård construction
-[Your definition]
+### Domain extension (Merkle-Damgård construction)
+> When constructing collision intractable hash functions, it is always enough build collision-intractable functions that map a fixed number of bits, say $m$ bits to $k$ bits, as long as $m > k$.
+>
+> This is because if there exists a collision-intractable hash function generator $\mathcal{H}'$ producing functions with finite input length $m > k$,
+> then there exists a collision-intractable generator $\mathcal{H}$ that produces functions taking arbitrary length inputs.
 
-### Suffix-free encoding
-[Your definition]
+> One way to do this is the Merkle-Damgård construction, which underlies many popular hash functions including MD5, SHA-1, and SHA-2. This starts from the given $f: \{0,1\}^m \to \{0,1\}^k$ (where $m > k + 1$), and builds a hash function $h: \{0,1\}^* \to \{0,1\}^k$.
+> It follows these steps:
+> 1. Split into Blocks - Split the input message $x$ into $v$-bit blocks $x_i$ (where $v = m - k - 1$), padding the last block with $0$s if needed. Add an extra block $x_{n+1}$ containing the number of $0$s used in padding.
+> 2. Initialization - Set $z_1 := 0^k || 1 || x_1$ (using a "1" separator bit).
+> 3. Iterative Hashing - For $i = 2, \ldots, n+1$, compute $z_i := f(z_{i-1}) || 0 || x_i$ (using a "0" separator bit).<br/>
+> Each iteration combines the result of applying $f$ to the previous state ($k$ bits), a separator bit, and the next message block ($v$ bits) to produce a new $m$-bit input for the next round.
+> 4. Output - $h(x) := f(z_{n+1})$
 
-### Birthday paradox (in the context of hash functions)
-[Your definition]
+> SHA-3 uses a newer method, the sponge design.<br/>
+> Here, the construction maintains a state which are carried forward from the previous iteration.
+> The output does not fully match the internal state of the construction at the end, so you couldn't just continue where you left off (get $\hat{h}(m || x)$) (prevents *length extension attacks* possible with some hash functions). 
 
-### Random oracle model
-[Your definition]
+
+### MAC
+> How do we make sure that a message the receiver gets is the same as the one sent by the sender?
+> 
+> Yeah, hash codes - but what if the MiM adversary can modify both the messages and the authenticators?<br/>
+> (This will be the case when a sender communicates with a receiver over an insecure channel.)
+
+> **When the sender and receiver can share a secret key:**
+> 1. An authenticator $s$ can be computed from both data $m$ and the secret key $k$.
+> 2. $m, s$ is sent on the channel, and $m', s'$ is received.
+> 3. The receiver can, using the *same* key $k$, test if $m', s'$ look OK.
+> 
+> Of course, this should always be the case if $m', s' = m, s$,
+> and we hope that anyone who does not know $k$ cannot come up with a fake pair $m', s'$ that the receiver would accept.
+> Such systems can be built using *Message Authentication Codes* (MAC's) also called *Keyed Hash Functions*.
+> > The version where sender and receiver cannot have a shared secret, (like public-key crypto,) is *Digital Signature Schemes* (out of scope now).
+
+> A *secret-key authentication system* consists of three probabilistic algorithms $(G, A, V)$.
+>  
+> $G$ which outputs a key $K$, usually it works by simply choosing $K$ as a random bit string of a certain length.<br/>
+> Algorithm $A$ gets input a message $m$ and the key $K$ and produces an authenticator value $s = A_K(m)$ (aka a MAC).<br/>
+> Finally algorithm $V$ gets as input an authenticator $s$, a message $m$ and key $K$, and outputs $V_K(s, m)$ which is equal to *accept* or *reject*.
+> 
+> It is required that we always have $V_K(A_K(m), m) = accept$.
+
+
+#### CMA Security
+> Given a system $(G, A, V)$, adversary $E$ plays the following game with an oracle that holds key $K$ from $G$:
+> 
+> $E$ may send any number of messages $m$ to the oracle,
+> receiving back $A_K(m)$s (a chosen message attack, CMA).<br/>
+> $E$ wins by **outputting a new message** $m_0$ and authenticator $s_0$ where $V_K(s_0, m_0) = accept$.
+
+> Note: For deterministic MAC schemes (where each message has one valid MAC), the adversary can verify candidates by querying the oracle. Otherwise it does not have access to $V_K$.
+
+> **Definition**:
+> A MAC scheme is $(t, q, \varepsilon, \mu)$ CMA-secure if any adversary running in time $\leq t$, making $\leq q$ queries on messages totaling $\leq \mu$ bits, wins with probability $\leq \varepsilon$.
+
+
+### CBC-MAC and EMAC (MACs from Block Ciphers)
+
+#### CBC-MAC Construction
+> **Basic idea**: Encrypt the message in CBC mode (with $IV = 0$), and use the *final ciphertext block* as the MAC.
+> This gives a fixed-length output regardless of message length.
+
+> **Problem**: Only secure if no message is ever a prefix of another message.<br/>
+> *Why?* If you have MAC for message $m$, you can compute MAC for $m||x$ for any extension $x$.
+> 
+> **Attempted fixes**:
+> - Prepending length: *Secure* but impractical (need to know message length before starting).
+> - Appending length: Practical but *insecure* (attackable even with this fix).
+
+#### EMAC (Encrypted MAC) - The Solution
+> **Construction**: Use *two* independent keys $K_1, K_2$:
+> $$\text{EMAC}_{K_1,K_2}(m) = E_{K_2}(\text{CBC-MAC}_{K_1}(m))$$
+> 
+> 1. Compute CBC-MAC of message using key $K_1$
+> 2. Encrypt that MAC using key $K_2$ (single block encryption)
+> 3. Output the result
+
+> **Security Result**:<br/>
+> If the block cipher is a $(t', q', \varepsilon')$-secure PRF with block length $k$, then EMAC is $(t, q, \varepsilon, \mu)$ CMA-secure where:
+> $$\varepsilon = 2\varepsilon' + \frac{2(\mu/k)^2 + 1}{2^k}$$
+> (As long as $\mu$ isn't too large, EMAC inherits most of the cipher's strength.)
+
+> **Proof intuition**: 
+> 1. Replace $E_{K_1}$ and $E_{K_2}$ with truly random functions (distinguishing advantage $\leq 2\varepsilon'$).
+> 2. Show EMAC with random functions is close to a totally random function (advantage $\leq 2(\mu/k)^2 / 2^k$).
+> 3. Against a totally random function, adversary wins with probability $\leq 1/2^k$ (must guess correct value for new message).
+> 4. Triangle inequality gives total bound.
+
+### HMAC (MACs from Hash Functions)
+
+> **Construction**: Based on any collision-intractable hash function $H$ (e.g., SHA-1):
+> $$\text{HMAC}_K(m) = H((K \oplus \text{opad}) || H((K \oplus \text{ipad}) || m))$$
+> where $\text{ipad} = 363636\ldots36$ and $\text{opad} = 5C5C5C\ldots5C$ (in hex).
+
+> **Intuition**: Apply the hash function *twice* with the key XOR'd with different constants.
+> - Inner hash: combines key with one constant and the message
+> - Outer hash: combines key with different constant and inner hash result
+
+> **Why not just $H(K || m)$?**<br/>
+> Many hash functions (like SHA-1) use iterative compression functions.
+> Applying the key twice with different XOR values prevents attacks that exploit the internal structure.
+
+> **Security**:
+> - Provably secure in the *random oracle model* (where the hash function is modeled as a truly random function)
+> - In practice: secure if hash is collision-resistant AND compression function is secure as MAC
+> - Popular due to efficiency and no reliance on block ciphers (which may have export restrictions)
 
 ---
 
