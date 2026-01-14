@@ -23,7 +23,7 @@ You must be able to:
 - [x] [Public-key Crypto based on Factoring](./factoring_based_crypto.md) (27 pages)
 - [x] [Public-key Crypto based on Discrete Log and LWE](./discrete_log_lwe_crypto.md) (21 pages)
 - [x] [Symmetric Authentication and Hash Functions](./authentication_hash.md) (16 pages)
-- [ ] [Digital Signature Schemes](./digital_signatures.md) (14 pages)
+- [x] [Digital Signature Schemes](./digital_signatures.md) (14 pages)
 
 ## Statistics
 
