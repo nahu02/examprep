@@ -69,8 +69,14 @@ you have learned $log_2(\frac{1}{p}) \text{ bits}$ of information.
 > As the ciphertext grows longer, these spurious solutions disappear.
 > The unicity distance is when the expected number of spurious keys drops to zero.
 
-> The unicity distance is calculated as: $n_0 \approx \frac{H(K)}{D}$, where $D$ is the redundancy of the language per character.
-> For example, a substitution cipher with a 26-letter alphabet has about $88 \text{ bits}$ of key entropy, and English has roughly $3.2 \text{ bits/character}$ redundancy, giving a unicity distance of about $28$ characters.
+> 
+
+> The unicity distance is calculated as: (assuming uniformly chosen keys) $n_0 \approx \frac{H(K)}{D}$, where $D$ is the redundancy of the language per character.
+> $$n_0 \approx \frac{log_2(|K|)}{R_L \cdot log(∣P∣)}$$
+> **Redundancy of a language** ($R_L$) measures "unused" information capacity per character: $R_L = 1 - \frac{H_L}{\log(|P|)}$, where $H_L$ is actual entropy per letter and $\log(|P|)$ is maximum entropy. $H_L \approx 1.25$ bits per letter in English. 
+> For English, $R_L \approx 0.75$ (highly redundant)—this lets us understand partial speech and lets cryptanalysts distinguish meaningful plaintext from random strings.
+> 
+> For example, a substitution cipher with a 26-letter alphabet has about $88 \text{ bits}$ of key entropy, and English has roughly $3.5 \text{ bits/character}$ redundancy, giving a unicity distance of about $25$ characters.
 
 
 ## Logic Flow / Mechanism (Process)

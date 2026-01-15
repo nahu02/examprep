@@ -2,11 +2,6 @@
 
 What a crypto-system is (the three algorithms) You can describe DES or AES - but you can also just give a high-level description of what a block cipher is. Definitions of PRF and CPA security. Specification of CBC or CTR modes (or both), proofs of CPA security for CBC or CTR mode (or both). Perhaps a brief talk about stream ciphers and how to make one from a block cipher.
 
-## The "Elevator Pitch" (Synthesis)
-
-> **Explain Symmetric (secret-key) Crypto to a peer in 3 sentences. Focus on WHY we use it, not just how.**
-
-
 ## Core Vocabulary & Syntax (Total Recall)
 
 ### Cryptosystem
@@ -122,7 +117,7 @@ What a crypto-system is (the three algorithms) You can describe DES or AES - but
 
 ### CTR mode and proof for its CPA security 
 
-> (Conjectured) PRF-secure block cyphers can be converted into probabilistic, CPA-secure cryptosystems that as a bonus benefit can handle any length.
+> PRF-secure block cyphers can be converted into probabilistic, CPA-secure cryptosystems that as a bonus benefit can handle any length.
 > These are often called *modes of use*, and one of these is the CTR (Counter) mode.
 
 > The trick is to create a random initialization vector $IV$ or nonce of length $n$ (block size).
@@ -131,6 +126,8 @@ What a crypto-system is (the three algorithms) You can describe DES or AES - but
 > Then increase $IV$ by one, encrypt it and XOR the next block.
 > The result is $[IV, m_1 \oplus E_K(IV), m_2 \oplus E_K(IV + 1) \dots]$ (where the square brackets denote the concatenation of bits).
 > Decryption is rather trivial.
+
+![Counter Mode Encryption](assets/sym_ctr.png)
 
 > Suppose $\{E'_K \mid K \in \mathscr{K}\}$ is $(t', q', \varepsilon')$ PRF-secure.
 > Then CTR encryption based on this system is $(t, q, \mu, \varepsilon)$ CPA-secure for any $q$, and for

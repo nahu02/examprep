@@ -25,6 +25,15 @@ You must be able to:
 - [x] [Symmetric Authentication and Hash Functions](./authentication_hash.md) (16 pages)
 - [x] [Digital Signature Schemes](./digital_signatures.md) (14 pages)
 
+## Oral Exam Notes
+
+- [x] [Information Theory](./oral_information_theory.md) (12:30)
+- [x] [Symmetric Cryptography](./oral_symmetric_crypto.md) (14:30)
+- [x] [Public-key Crypto from Factoring](./oral_factoring_based_crypto.md) (16:00)
+- [x] [Public-key Crypto from Discrete Log and LWE](./oral_discrete_log_lwe_crypto.md) (15:30)
+- [x] [Symmetric Authentication and Hash Functions](./oral_authentication_hash.md) (15:30)
+- [x] [Digital Signatures (Schnorr Scheme)](./oral_digital_signatures.md) (15:00)
+
 ## Statistics
 
 - **Total pages processed:** 162
