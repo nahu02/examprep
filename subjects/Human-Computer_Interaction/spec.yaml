@@ -1,4 +1,4 @@
-subject: "Human-Computer Interaction"
+subject: "Human-Computer_Interaction"
 exam_format: "two-hour written test consisting of 30 multiple-choice questions (1 point each) and 5 essay questions (up to 6 points each)"
 must_be_able_to:
   - "Outline what the field of Human–Computer Interaction (HCI) is concerned with."
@@ -6,7 +6,6 @@ must_be_able_to:
   - "Analyse user interfaces and motivate user interface designs using HCI models and theories."
   - "Apply HCI principles and guidelines in design and implementation of user interfaces."
   - "Describe, select and apply appropriate methods for evaluation of usability and user experience."
-
 
 subtopics:
   - id: introduction_to_hci
