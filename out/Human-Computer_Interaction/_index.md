@@ -26,7 +26,7 @@ You must be able to:
 - [x] [DOM & Event Handling](./dom_and_events.md) (1 pages)
 - [x] [GUI Design Principles & Theories](./design_principles_theories.md) (64 pages)
 - [x] [Visual Design & Mental Models](./visual_design_mental_models.md) (8 pages)
-- [ ] [Input & Output Devices](./input_output_devices.md) (61 pages)
+- [x] [Input & Output Devices](./input_output_devices.md) (61 pages)
 - [ ] [Human Perception & Cognition](./cognitive_psychology.md) (132 pages)
 - [ ] Desktop Applications (no content found)
 - [ ] [Analytical Evaluation Methods](./evaluation_analytical.md) (61 pages)

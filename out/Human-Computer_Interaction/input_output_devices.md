@@ -5,7 +5,7 @@ Input & output devices in HCI enable users to control end-effectors (e.g., finge
 - **Degrees of freedom**: Number of independent movements an end-effector can make (e.g., knee: 1; hip: 3; 3D total: 6 with translation + roll/pitch/yaw).
 - **Open-loop vs closed-loop control**: Open-loop lacks feedback (fast, less precise, e.g., quick button press); closed-loop uses feedback for correction (slower, precise, e.g., mouse pointing).
 - **Control-display gain**: Ratio of input movement to display movement (part of transfer functions mapping user input to output).
-- **Throughput (TP)**: Bits per second (\( TP = \frac{ID_{avg}}{MT_{avg}} \) or \( TP = \frac{1}{b} \)) measuring device performance independently of task.
+- **Throughput (TP)**: Bits per second ($TP = \frac{ID_{avg}}{MT_{avg}}$ or $TP = \frac{1}{b}$) measuring device performance independently of task.
 - **Speed-accuracy trade-off**: Motor system cannot be both fast and accurate simultaneously in aimed movements.
 
 ## Core Mechanism / Logical Flow
@@ -23,6 +23,6 @@ Expect MCQs on definitions/distinctions (e.g., open/closed-loop) and essays anal
 **Example:** "Explain open-loop vs closed-loop control with HCI examples (4 pts)." *Answer: Open-loop: no feedback, fast/less precise (swipe); closed-loop: feedback-driven, precise (cursor aiming); closed-loop slower but corrects variability.*
 
 ## Source Map
-- `[IntroductionToHCI-3.pdf](../../subjects/Human-Computer Interaction/sources/IntroductionToHCI-3.pdf) | Page 73-74 | Covers: Degrees of freedom, open/closed-loop, aimed movements, speed-accuracy trade-off.`
-- `[IntroductionToHCI-3.pdf](../../subjects/Human-Computer Interaction/sources/IntroductionToHCI-3.pdf) | Page 307-308 | Covers: Throughput (TP) calculation and input device comparison.`
-- `[IntroductionToHCI-3.pdf](../../subjects/Human-Computer Interaction/sources/IntroductionToHCI-3.pdf) | Page 311-312 | Covers: Control systems (elements, closed-loop), transfer functions, feedback.`
+- [IntroductionToHCI-3.pdf](../../subjects/Human-Computer_Interaction/sources/IntroductionToHCI-3.pdf) | Page 73-74 | Covers: Degrees of freedom, open/closed-loop, aimed movements, speed-accuracy trade-off.
+- [IntroductionToHCI-3.pdf](../../subjects/Human-Computer_Interaction/sources/IntroductionToHCI-3.pdf) | Page 307-308 | Covers: Throughput (TP) calculation and input device comparison.
+- [IntroductionToHCI-3.pdf](../../subjects/Human-Computer_Interaction/sources/IntroductionToHCI-3.pdf) | Page 311-312 | Covers: Control systems (elements, closed-loop), transfer functions, feedback.
