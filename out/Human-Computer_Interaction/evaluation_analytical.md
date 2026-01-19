@@ -2,21 +2,21 @@
 
 ## Essence of the Topic (The "Why")
 
-**Analytical Evaluation Methods** are systematic techniques used to assess user interfaces and interactive systems without requiring direct user participation during evaluation.[4] These methods are critical for identifying usability problems early in design, exposing potential issues like complicated task structures or insufficient training before systems reach users.[4] They complement empirical evaluation approaches by offering cost-effective, rapid assessment of interface design quality against HCI principles and models.
+**Analytical Evaluation Methods** are systematic techniques used to assess user interfaces and interactive systems without requiring direct user participation during evaluation. These methods are critical for identifying usability problems early in design, exposing potential issues like complicated task structures or insufficient training before systems reach users. They complement empirical evaluation approaches by offering cost-effective, rapid assessment of interface design quality against HCI principles and models.
 
 ---
 
 ## Key Concepts & Critical Vocabulary
 
-- **Heuristic Evaluation**: A systematic inspection method where evaluators assess interfaces against established HCI principles (heuristics) to identify usability violations without user involvement.[1][4]
+- **Heuristic Evaluation**: A systematic inspection method where evaluators assess interfaces against established HCI principles (heuristics) to identify usability violations without user involvement.
 
-- **Cognitive Walkthrough**: An analytical technique where evaluators simulate user problem-solving processes by stepping through interface tasks, examining whether the system supports users' mental models and learning.[4]
+- **Cognitive Walkthrough**: An analytical technique where evaluators simulate user problem-solving processes by stepping through interface tasks, examining whether the system supports users' mental models and learning.
 
-- **Think-Aloud Studies**: A protocol where users verbalize their thoughts, reasoning, and decision-making processes while interacting with a system, allowing researchers to understand cognitive processes and identify confusion points.[1][4]
+- **Think-Aloud Studies**: A protocol where users verbalize their thoughts, reasoning, and decision-making processes while interacting with a system, allowing researchers to understand cognitive processes and identify confusion points.
 
-- **Usability**: The degree to which users can achieve their goals successfully and without undue difficulty; comprises **effectiveness** (accuracy and completeness of goal achievement), **efficiency** (resources expended), and **satisfaction** (user comfort and acceptance).[4]
+- **Usability**: The degree to which users can achieve their goals successfully and without undue difficulty; comprises **effectiveness** (accuracy and completeness of goal achievement), **efficiency** (resources expended), and **satisfaction** (user comfort and acceptance).
 
-- **Error Recovery Cost**: A formal metric measuring how many interaction steps are required to recover from user errors; fewer steps indicate better interface design.[4]
+- **Error Recovery Cost**: A formal metric measuring how many interaction steps are required to recover from user errors; fewer steps indicate better interface design.
 
 ---
 
@@ -24,15 +24,15 @@
 
 ### Analytical Evaluation Process
 
-1. **Define evaluation purpose and criteria**: Establish what aspects of usability or user experience will be assessed (e.g., learnability, error prevention, consistency).[4]
+1. **Define evaluation purpose and criteria**: Establish what aspects of usability or user experience will be assessed (e.g., learnability, error prevention, consistency).
 
-2. **Select appropriate analytical method**: Choose between heuristic evaluation (principle-based inspection), cognitive walkthrough (task-based simulation), or formal modeling depending on design stage and available resources.[4]
+2. **Select appropriate analytical method**: Choose between heuristic evaluation (principle-based inspection), cognitive walkthrough (task-based simulation), or formal modeling depending on design stage and available resources.
 
-3. **Conduct systematic analysis**: Apply the chosen method systematically—evaluators inspect against heuristics, simulate user cognition, or analyze formal dialogue structures (e.g., finite state machines).[4]
+3. **Conduct systematic analysis**: Apply the chosen method systematically—evaluators inspect against heuristics, simulate user cognition, or analyze formal dialogue structures (e.g., finite state machines).
 
-4. **Document findings with traceability**: Record identified problems with clear links to underlying data and reasoning, ensuring verifiability and credibility of results.[4]
+4. **Document findings with traceability**: Record identified problems with clear links to underlying data and reasoning, ensuring verifiability and credibility of results.
 
-5. **Iterate design based on insights**: Use findings to refine interface design before empirical testing with actual users.[4]
+5. **Iterate design based on insights**: Use findings to refine interface design before empirical testing with actual users.
 
 ---
 
@@ -46,7 +46,7 @@
 | **Timing in Design** | Effective early in design process | Better for validation of mature designs |
 | **Scope** | Identifies structural/formal problems | Captures real-world usage patterns |
 
-**Key distinction**: Analytical methods are **predictive** (what problems *might* occur based on design structure), while empirical methods are **descriptive** (what problems *actually* occur in practice).[4]
+**Key distinction**: Analytical methods are **predictive** (what problems *might* occur based on design structure), while empirical methods are **descriptive** (what problems *actually* occur in practice).
 
 ---
 
@@ -81,7 +81,3 @@
 | IntroductionToHCI-3.pdf | Page 325 | Dialogue analysis using formal models (FSM consistency, error recovery cost) |
 | IntroductionToHCI-3.pdf | Page 284 | Verifiability and traceability principles in user research |
 | IntroductionToHCI-3.pdf | Page 278–280 | Task analysis as analytical foundation (HTA, hierarchical decomposition) |
-
----
-
-**Note**: The provided search results contain general HCI principles but lack detailed coverage of specific analytical methods (heuristic evaluation, cognitive walkthrough procedures, and think-aloud protocols). The PDF excerpts provide foundational context on evaluation principles, task analysis, and formal dialogue analysis, but comprehensive procedural details for each analytical method are not fully represented in the source material provided.

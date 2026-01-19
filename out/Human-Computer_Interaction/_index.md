@@ -29,7 +29,7 @@ You must be able to:
 - [x] [Input & Output Devices](./input_output_devices.md) (61 pages)
 - [x] [Human Perception & Cognition](./cognitive_psychology.md) (132 pages)
 - [ ] Desktop Applications (no content found)
-- [ ] [Analytical Evaluation Methods](./evaluation_analytical.md) (61 pages)
+- [x] [Analytical Evaluation Methods](./evaluation_analytical.md) (61 pages)
 - [ ] Responsive Web Design (no content found)
 - [ ] [Empirical Evaluation (Experiments)](./evaluation_empirical.md) (89 pages)
 - [ ] CSS Frameworks (no content found)
