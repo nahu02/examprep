@@ -31,7 +31,7 @@ You must be able to:
 - [ ] Desktop Applications (no content found)
 - [x] [Analytical Evaluation Methods](./evaluation_analytical.md) (61 pages)
 - [ ] Responsive Web Design (no content found)
-- [ ] [Empirical Evaluation (Experiments)](./evaluation_empirical.md) (89 pages)
+- [x] [Empirical Evaluation (Experiments)](./evaluation_empirical.md) (89 pages)
 - [ ] CSS Frameworks (no content found)
 - [ ] [Activity Theory](./activity_theory.md) (4 pages)
 - [ ] JavaScript Frameworks (Vue.js) (no content found)
