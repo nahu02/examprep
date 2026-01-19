@@ -38,15 +38,15 @@ Interaction paradigms define how users communicate with computer systems—the f
 
 ## Critical Distinctions
 
-| Aspect | Command-Line Interface | Direct Manipulation |
-|--------|------------------------|---------------------|
-| **Visibility** | Low—commands hidden, require recall | High—objects and actions continuously visible |
-| **Learning Curve** | Steep—requires memorization and training | Shallow—leverages real-world intuition |
-| **User Type** | Expert/power users | Novice/casual users |
-| **Flexibility** | High—supports macros, scripting, abstraction | Limited—constrained to designed interactions |
-| **Error Handling** | Poor—allows syntactic errors | Good—restricts invalid actions |
-| **Feedback** | Delayed—user waits for system response | Immediate—continuous visual feedback |
-| **Task Suitability** | Abstract tasks, large-scale operations, networked systems | Concrete tasks, visual/spatial manipulation |
+| Aspect               | Command-Line Interface                                    | Direct Manipulation                           |
+| -------------------- | --------------------------------------------------------- | --------------------------------------------- |
+| **Visibility**       | Low—commands hidden, require recall                       | High—objects and actions continuously visible |
+| **Learning Curve**   | Steep—requires memorization and training                  | Shallow—leverages real-world intuition        |
+| **User Type**        | Expert/power users                                        | Novice/casual users                           |
+| **Flexibility**      | High—supports macros, scripting, abstraction              | Limited—constrained to designed interactions  |
+| **Error Handling**   | Poor—allows syntactic errors                              | Good—restricts invalid actions                |
+| **Feedback**         | Delayed—user waits for system response                    | Immediate—continuous visual feedback          |
+| **Task Suitability** | Abstract tasks, large-scale operations, networked systems | Concrete tasks, visual/spatial manipulation   |
 
 **Key Insight**: Command-line interfaces prioritize *expressiveness and power*; direct manipulation prioritizes *usability and intuitiveness*. Modern systems often blend both—GUIs with embedded terminals for expert tasks.
 
@@ -73,10 +73,10 @@ Interaction paradigms define how users communicate with computer systems—the f
 
 ## Source Map
 
-- [IntroductionToHCI-3.pdf](../../subjects/Human-Computer Interaction/sources/IntroductionToHCI-3.pdf) | Page 399–400 | Covers: Interaction styles, command-line interfaces, forms, and user interface elements.
+- [IntroductionToHCI-3.pdf](../../subjects/Human-Computer_Interaction/sources/IntroductionToHCI-3.pdf) | Page 399–400 | Covers: Interaction styles, command-line interfaces, forms, and user interface elements.
 
-- [IntroductionToHCI-3.pdf](../../subjects/Human-Computer Interaction/sources/IntroductionToHCI-3.pdf) | Page 305–326 | Covers: Dialogue-based interaction, state machines, communication repair, and interaction design principles.
+- [IntroductionToHCI-3.pdf](../../subjects/Human-Computer_Interaction/sources/IntroductionToHCI-3.pdf) | Page 305–326 | Covers: Dialogue-based interaction, state machines, communication repair, and interaction design principles.
 
-- [IntroductionToHCI-3.pdf](../../subjects/Human-Computer Interaction/sources/IntroductionToHCI-3.pdf) | Page 376–399 | Covers: Interaction as practice, user interface components, and design considerations.
+- [IntroductionToHCI-3.pdf](../../subjects/Human-Computer_Interaction/sources/IntroductionToHCI-3.pdf) | Page 376–399 | Covers: Interaction as practice, user interface components, and design considerations.
 
 - Search Results  | General HCI Resources | Covers: Direct manipulation principles, interface styles, visibility heuristics, and interaction design theory.

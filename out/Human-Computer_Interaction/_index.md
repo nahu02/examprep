@@ -33,9 +33,9 @@ You must be able to:
 - [ ] Responsive Web Design (no content found)
 - [x] [Empirical Evaluation (Experiments)](./evaluation_empirical.md) (89 pages)
 - [ ] CSS Frameworks (no content found)
-- [ ] [Activity Theory](./activity_theory.md) (4 pages)
+- [x] [Activity Theory](./activity_theory.md) (4 pages)
 - [ ] JavaScript Frameworks (Vue.js) (no content found)
-- [ ] [Universal Usability & Accessibility](./accessibility_universal_design.md) (5 pages)
+- [x] [Universal Usability & Accessibility](./accessibility_universal_design.md) (5 pages)
 
 ## Statistics
 
